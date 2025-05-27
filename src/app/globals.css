@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-geist-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-geist-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-feature-settings: "ss01" on, "ss02" on, "ss03" on, "ss04" on, "ss05" on, "ss06" on, "zero" on, "tnum" on;
+  }
+}
+
+@layer components {
+  .nextjs-gradient {
+    @apply bg-gradient-to-b from-black to-zinc-900;
+  }
+
+  .nextjs-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400;
+  }
+
+  .nextjs-button {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors;
+  }
+
+  .nextjs-button-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .nextjs-button-secondary {
+    @apply bg-zinc-800 text-zinc-100 hover:bg-zinc-700;
+  }
+
+  .nextjs-card {
+    @apply rounded-lg border border-zinc-800 bg-zinc-900/50 p-6 backdrop-blur-sm transition-all hover:border-zinc-700;
+  }
+
+  .nextjs-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .nextjs-heading {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .nextjs-subheading {
+    @apply text-xl text-zinc-400 sm:text-2xl;
+  }
+
+  .nextjs-text {
+    @apply text-base text-zinc-400 sm:text-lg;
+  }
+
+  .nextjs-badge {
+    @apply inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900 px-2.5 py-0.5 text-xs font-medium text-zinc-400;
+  }
+
+  .nextjs-tab {
+    @apply inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-zinc-400 transition-colors hover:border-zinc-700 hover:text-zinc-100;
+  }
+
+  .nextjs-tab-active {
+    @apply border-blue-500 text-blue-500;
+  }
+
+  /* Timeline styles */
+  .nextjs-timeline-line {
+    @apply bg-gradient-to-b from-blue-500/20 via-zinc-500/20 to-blue-500/20;
+  }
+
+  .nextjs-timeline-dot {
+    @apply bg-gradient-to-r from-blue-500 to-blue-400;
+  }
+
+  /* Card hover effects */
+  .nextjs-card-hover {
+    @apply hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5;
+  }
+
+  /* Gradient backgrounds */
+  .nextjs-gradient-bg {
+    @apply bg-gradient-to-br from-black via-zinc-900 to-black;
+  }
+
+  .nextjs-gradient-border {
+    @apply border border-zinc-800/50 hover:border-blue-500/30;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-zinc-700;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
