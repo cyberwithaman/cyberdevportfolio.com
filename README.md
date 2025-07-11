@@ -110,7 +110,7 @@ This website serves as a professional platform for Cyber Dev Portfolio's cyberse
 
 1. Clone the repository:
    ```
-   git clone https://github.com/amananilofficial/cyberdevportfolio.com.git
+   git clone https://github.com/cyberwithaman/cyberdevportfolio.com.git
    cd cyberdevportfolio.com
    ```
 
